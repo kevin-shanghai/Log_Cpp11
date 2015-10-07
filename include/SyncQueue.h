@@ -34,7 +34,7 @@ namespace Logger
 			std::unique_lock<std::mutex> lk(mutex_);
 			while (Full())
 			{
-				queue_.emplace_back(value);
+				notFullCond_.wait(lk);
 			}
 			queue_.emplace_back(value);
 			notEmptyCond_.notify_one();
