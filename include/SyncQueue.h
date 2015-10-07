@@ -47,7 +47,7 @@ namespace Logger
 			{
 				notEmptyCond_.wait(lk);
 			}
-			T frontValue(std::move(queue_.front()));   //T must have move constructor
+			T frontValue(std::move(queue_.front()));
 			queue_.pop_front();
 			return frontValue;
 		}
