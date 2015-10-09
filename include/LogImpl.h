@@ -18,7 +18,7 @@ namespace Logger
 		{
 			strFuncName_ = funcName;
 		}
-		inline LogLevel GetLocalLogLevel()
+		LogLevel GetLocalLogLevel()
 		{
 			return logLevel_;
 		}
