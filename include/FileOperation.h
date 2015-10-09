@@ -17,7 +17,7 @@ namespace Logger
 		FileOperation(const char* sFileName);
 		void AppendLogFile(const char* logline, uint64_t len);
 		void FlushLogFile();
-		inline uint64_t GetWrittenBytes() const { return iBytesWrited_; }
+		uint64_t GetWrittenBytes() const { return iBytesWrited_; }
 
 	private:
 		uint64_t WriteLogFile(const char* msg, uint64_t msg_len);

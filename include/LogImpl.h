@@ -14,7 +14,7 @@ namespace Logger
 		~LogImpl();
 		LogStream& GetLogStream() const;
 		void LogFileNameAndLineNumber();
-		inline void LogFuncName(const char* funcName)
+		void LogFuncName(const char* funcName)
 		{
 			strFuncName_ = funcName;
 		}

@@ -47,9 +47,9 @@ namespace Logger
 			return *this;
 		}
 
-		inline void Append(const char* data, int len) { logBuffer_.Append(data, len); }
+		void Append(const char* data, int len) { logBuffer_.Append(data, len); }
 
-		inline const LogBuffer& GetLogBuffer() const { return logBuffer_; }
+		 const LogBuffer& GetLogBuffer() const { return logBuffer_; }
 
 
     private:
